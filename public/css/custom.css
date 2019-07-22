@@ -1,0 +1,759 @@
+#order-form {
+	margin-top: 40px;
+}
+
+#order-form #groups {
+	float: left;
+	width: 29%;
+	position: relative;
+}
+#order-form #services {
+	float: left;
+	width: 33%;
+	padding-left: 28px;
+	position: relative;
+}
+#order-form #services.active {
+	background: url('images/header/arrow-active.gif') 3px 7px no-repeat;
+}
+#order-form #services.inactive {
+	background: url('images/header/arrow-inactive.gif') 3px 7px no-repeat;
+}
+#order-form #selected-item {
+	float: left;
+	width: 38%;
+	padding-left: 28px;
+	position: relative;
+}
+#order-form #selected-item.active {
+	background: url('images/header/arrow-active.gif') 3px 7px no-repeat;
+}
+#order-form #selected-item.inactive {
+	background: url('images/header/arrow-inactive.gif') 3px 7px no-repeat;
+}
+
+
+
+#order-form div h2 {
+	zoom: 1;
+	position: relative;
+	display: block;
+	margin: 0;
+}
+#order-form div h2 span.text {
+	display: block;
+	padding: 3px 0;
+	overflow: hidden;
+	font-size: 17px;
+}
+#order-form div h2 span.number {
+	position: relative;
+	display: block;
+	float: left;
+	color: #ffffff;
+	font-size: 1.4em;
+	padding: 3px 8px 3px 6px;
+	margin-right: 7px;
+}
+#order-form div h2 span.number span.corner {
+	position: absolute;
+	display: block;
+	font-size: 6px;
+	line-height: 6px;
+	overflow: hidden;
+	width: 11px;
+	height: 11px;
+	background-repeat: no-repeat;
+}
+#order-form div h2 span.number span.left-top {
+	background-position: left top;
+	left: -2px;
+	top: -2px;
+}
+#order-form div h2 span.number span.right-top {
+	background-position: right top;
+	right: 0;
+	top: -2px;
+}
+#order-form div h2 span.number span.left-bottom {
+	background-position: left bottom;
+	left: -2px;
+	bottom: -2px;
+}
+#order-form div h2 span.number span.right-bottom {
+	background-position: right bottom;
+	right: 0;
+	bottom: -2px;
+}
+#order-form div h2 span.corner {
+	position: absolute;
+	display: block;
+	font-size: 6px;
+	line-height: 6px;
+	overflow: hidden;
+	width: 11px;
+	height: 11px;
+	background-repeat: no-repeat;
+}
+#order-form div h2 span.right-top {
+	background-position: right top;
+	right: -2px;
+	top: -2px;
+}
+#order-form div h2 span.right-bottom {
+	background-position: right bottom;
+	right: -2px;
+	bottom: -2px;
+}
+
+/* Active/Inactive decorations */
+#order-form div.active h2 {
+	border: solid 2px #01b7df;
+}
+#order-form div.active h2 span.number {
+	background: #01b7df;
+}
+#order-form div.active h2 span.number span.corner {
+	background-image: url('images/header/num-corners-active.gif');
+}
+#order-form div.active h2 span.corner {
+	background-image: url('images/header/corners-active.gif');
+}
+#order-form div.inactive h2 {
+	border: solid 2px #dbdbdb;
+}
+#order-form div.inactive h2 span.number {
+	background: #dbdbdb;
+}
+#order-form div.inactive h2 span.number span.corner {
+	background-image: url('images/header/num-corners-inactive.gif');
+}
+#order-form div.inactive h2 span.corner {
+	background-image: url('images/header/corners-inactive.gif');
+}
+
+/* Hacks for IE 6 or older */
+* html #order-form div h2 span.number span.right-bottom,
+* html #order-form div h2 span.number span.left-bottom,
+* html #order-form div h2 span.right-bottom {
+	bottom: expression((this.offsetParent.clientHeight % 2) ? '-3px' : '-2px');
+}
+* html #order-form div h2 span.right-bottom,
+* html #order-form div h2 span.right-top {
+	margin-left: 100%;
+	left: -9px;
+}
+* html #order-form div h2 span.number span.right-bottom,
+* html #order-form div h2 span.number span.right-top {
+	left: -11px;
+	margin-left: 100%;
+}
+
+#order-form ul {
+	display: block;
+	position: relative;
+	margin-top: 10px;
+	padding: 0;
+	list-style-type: none;
+}
+#order-form ul li {
+	zoom: 1;
+	display: block;
+	position: relative;
+	padding-left: 10px;
+}
+#order-form ul li a {
+	line-height: 1.5em;
+ 	position: relative;
+ 	display: block;
+	width: 100%;
+	background: #ffffff;
+	color: #000000;
+	border: none;
+	text-decoration: none;
+}
+#order-form ul li a span.text {
+background: url(https://www.vappingo.com/bitrix/templates/vappingo/images/marker-3.gif) 12px 8px no-repeat;
+	padding: 3px 10px 3px 36px;
+	display: block;
+}
+#order-form ul li a span.border {
+	zoom: 1;
+ 	position: relative;
+ 	display: block;
+ 	background-image: none;
+ 	cursor: hand;
+ 	cursor: pointer;
+}
+#order-form ul li a span.top {
+ 	background-position: left top;
+ 	background-repeat: repeat-x;
+}
+#order-form ul li a span.bottom {
+ 	background-position: left bottom;
+ 	background-repeat: repeat-x;
+}
+#order-form ul li a span.left {
+ 	background-position: left top;
+ 	background-repeat: repeat-y;
+}
+#order-form ul li a span.right {
+ 	background-position: right top;
+ 	background-repeat: repeat-y;
+}
+#order-form ul li a:hover,
+#order-form ul li a.selected {
+	background: url('images/list/bg.gif') repeat-x left top #d4d4d4;
+}
+#order-form ul li a:hover span.border,
+#order-form ul li a.selected span.border {
+ 	background-image: url('images/list/border.gif');
+}
+#order-form ul li a span.corner {
+	position: absolute;
+	display: block;
+	font-size: 5px;
+	line-height: 5px;
+	overflow: hidden;
+	width: 7px;
+	height: 7px;
+	background-repeat: no-repeat;
+	background-image: none;
+}
+#order-form ul li a.selected span.corner,
+#order-form ul li a:hover span.corner {
+	background-image: url('images/list/corners.gif');
+}
+#order-form ul li a span.left-top {
+	background-position: left top;
+	left: 0;
+	top: 0;
+}
+#order-form ul li a span.right-top {
+	background-position: right top;
+	right: 0;
+	top: 0;
+}
+#order-form ul li a span.left-bottom {
+	background-position: left bottom;
+	left: 0;
+	bottom: 0;
+}
+#order-form ul li a span.right-bottom {
+	background-position: right bottom;
+	right: 0;
+	bottom: 0;
+}
+
+#order-form ul.active {
+	display: block;
+}
+#order-form ul.inactive {
+	display: none;
+}
+
+/* Hacks for IE 6 or older */
+* html #order-form ul li span.right-bottom,
+* html #order-form ul li span.left-bottom {
+	bottom: expression((this.offsetParent.clientHeight % 2) ? '-1px' : 0);
+}
+* html #order-form ul li span.right-bottom,
+* html #order-form ul li span.right-top {
+	margin-left: 100%;
+	left: -7px;
+}
+
+
+#order-item,
+#total-sum {
+	postion: relative;
+	margin-top: 10px;
+}
+
+#total-sum {
+	display: none;
+}
+
+#selected-item h3 {
+	zoom: 1;
+	position: relative;
+	display: block;
+	background-color: #cdebf3;
+	font-weight: normal;
+	padding: 3px 80px 4px 10px;
+	margin: 0;
+}
+
+#selected-item h3 span.price {
+	position: absolute;
+	display: block;
+	right: 10px;
+	top: 3px;
+}
+
+#selected-item h3 span.corner {
+	position: absolute;
+	display: block;
+	font-size: 5px;
+	line-height: 5px;
+	overflow: hidden;
+	width: 12px;
+	height: 12px;
+	background-repeat: no-repeat;
+	background-image: url('images/form/corners.gif');
+}
+#selected-item h3 span.left-top {
+	background-position: left top;
+	left: 0;
+	top: 0;
+}
+#selected-item h3 span.right-top {
+	background-position: right top;
+	right: 0;
+	top: 0;
+}
+#selected-item h3 span.left-bottom {
+	background-position: left bottom;
+	left: 0;
+	bottom: 0;
+}
+#selected-item h3 span.right-bottom {
+	background-position: right bottom;
+	right: 0;
+	bottom: 0;
+}
+
+#order-item div.label {
+	float: left;
+	margin-top: 10px;
+	margin-left: 10px;
+color: #000000;
+}
+#order-item div.input {
+	float: right;
+	margin-top: 10px;
+	padding-right: 10px;
+}
+#order-item div.input input.page-count {
+	width: 110px;
+	text-align: right;
+}
+#order-item div.clear {
+	height: 10px;
+	margin: 0 8px;
+	border-bottom: 1px solid #dbdbdb;
+}
+#order-item select {
+	width: 110px;
+}
+
+#button-wrap {
+	margin-top: 10px;
+	float: right;
+}
+
+#selected-item.inactive form {
+	display: none;
+}
+#selected-item.active form {
+	display: block;
+}
+#add-form h3 span.price {
+	display: none;
+}
+
+/*
+
+  - Setting a subtle transition on the order form sections:
+  - Hide overflow and set a max height for inactive panels
+
+*/
+div#order-form > div {
+  -webkit-transition: all .65s ease-in-out;
+  -moz-transition: all .65s ease-in-out;
+  -ms-transition: all .65s ease-in-out;
+  -o-transition: all .65s ease-in-out;
+  transition: all .65s ease-in-out;
+  overflow: hidden;
+}
+
+div#order-form > div.inactive {
+  height: 45px;
+  max-height: 45px;
+}
+
+div#order-form > div.active {
+  height: auto!important;
+  max-height: 1000px!important;
+}
+
+
+/*Align the section arrows vertically and reduce the size*/
+div#order-form > div + div {
+  background-position: 5px 16px!important;
+  background-size: 18px 12px!important;
+}
+
+
+/*Set section headings styles*/
+div#order-form > div h2 {
+  padding: 5px 0;
+  border: solid 1px #dbdbdb!important;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  margin-bottom: 30px;
+}
+
+div#order-form > div.active h2 {
+  border: solid 1px #01b7df!important;
+}
+
+
+/*Position the heading text*/
+div#order-form > div h2 span.text {
+  font-weight: 300;
+  text-align: left;
+  padding-left: 75px;
+  color: #01b7df;
+}
+
+
+/*Style the heading section number*/
+div#order-form > div span.number {
+  float: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 35px;
+  line-height: normal;
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
+
+
+/*Remove the border images*/
+div#order-form > div span.corner {
+  display: none;
+  background-image: none!important;
+}
+
+div#order-form > div span.number span.corner {
+  display: none;
+}
+
+
+/*Order form list items alignment*/
+div#order-form ul {
+  text-align: left;
+}
+
+/*Vertically align the list item chevrons*/
+div#order-form ul li a span.text {
+  background-position: 12px 11px!important;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+/*Add a bit more space between each list item*/
+div#order-form ul li {
+  margin-bottom: 10px;
+}
+
+/*No margin bottom for the last list item*/
+div#order-form ul li:last-child {
+  margin-bottom: 0;
+}
+
+/*Remove the border from the list items*/
+div#order-form ul li a span.border {
+  border: none!important;
+}
+
+
+/*
+  List item styling - set some defaults here:
+
+  - Remove the background image
+  - Set the selected style
+*/
+div#order-form ul li a {
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  background: none!important;
+  position: relative;
+  border: none!important;
+
+  color: #8c8c8c;
+}
+
+
+/*Remove border images*/
+div#order-form ul li a span.corner {
+  display: none !important;
+}
+
+div#order-form ul li a span.border {
+  background-image: none!important;
+}
+
+
+/*Add the border when selected or on hover*/
+div#order-form ul li a:hover, div#order-form ul li a.selected {
+  border: none!important;
+  background: none!important;
+  color: #000000;
+}
+
+div#order-form ul li a span.text {
+  padding: 3px 10px 3px 26px;
+}
+
+#order-item div.label {
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 18px;
+}
+
+/*Set the select height to match the no or words input*/
+#order-item div.input select#hours {
+  height: 30px;
+}
+
+
+/*Order item box*/
+div#order-form div#selected-item div#order-item {
+  text-align: left;
+  padding: 15px 5px 20px;
+  border: solid 1px #dbdbdb;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  margin-top: 26px;
+}
+
+div#order-form div#selected-item div#order-item h3 {
+  font-size: 22px;
+  background: transparent;
+  margin-bottom: 20px;
+}
+
+div#order-form div#selected-item div#order-item h3 span.text,
+div#order-form div#selected-item div#order-item h3 span.price {
+  color: #4f6c87;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.4em;
+  display: inline-block;
+}
+
+#order-item div.clear {
+  margin: 0 auto;
+  width: 100%;
+  width: calc(100% - 20px);
+}
+
+
+/*Inputs and select styling*/
+div#order-form div#selected-item div#order-item input[type="text"],
+div#order-form div#selected-item div#order-item select {
+  text-align: left;
+  padding: 5px 8px;
+}
+
+div#order-form div#selected-item div#order-item select {
+  padding: 8px;
+  height: auto;
+}
+
+
+/*Remove the last underline from form box*/
+div#order-form div#selected-item div#order-item div.clear:last-child {
+  border: none!important;
+  height: 0;
+}
+
+
+/*Order total box*/
+div#order-form div#selected-item div#total-sum {
+  text-align: left;
+  margin-top: 25px;
+}
+
+div#order-form div#selected-item div#total-sum h3 {
+  background: transparent;
+  border: solid 1px #dbdbdb;
+  padding: 12px 10px;
+}
+
+div#order-form div#selected-item div#total-sum h3,
+div#order-form div#selected-item div#total-sum h3 span.price {
+  color: #4f6c87;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.4em;
+  font-size: 22px;
+}
+
+div#order-form div#selected-item div#total-sum h3 span.price {
+  top: 12px;
+}
+
+div#order-form div#selected-item div#total-sum + div#button-wrap {
+  margin-top: 24px;
+  float: none;
+}
+
+div#order-form div#selected-item div#total-sum + div#button-wrap input[type="submit"] {
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  padding: 12px 0;
+
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+
+
+
+/*Mobile and Tablet Portrait*/
+@media ( max-width: 1024px ) and (orientation: portrait) {
+
+  div#order-form {
+    margin-top: 0;
+  }
+
+  div#order-form > div {
+    float: none!important;
+    width: 100%!important;
+    display: block!important;
+    padding-left: 0!important;
+    margin-bottom: 40px;
+  }
+
+  div#order-form > div:last-child {
+    margin-bottom: 0;
+  }
+
+  div#order-form > div h2 {
+    margin-bottom: 15px;
+  }
+
+  div#order-form ul {
+    margin-bottom: 0;
+  }
+
+  div#order-form ul li {
+    margin-bottom: 5px;
+  }
+
+  div#order-form ul li a span.text {
+    font-size: 16px;
+  }
+
+  div#order-form div#selected-item div#order-item h3 {
+    font-size: 18px;
+  }
+}
+/*Mobile and Tablet Portrait*/
+
+
+/*Tablet Portrait*/
+@media ( min-width: 768px ) and ( max-width: 1024px ) and (orientation: portrait) {
+
+  div#order-form > div {
+    float: none!important;
+    width: 100%!important;
+    display: block!important;
+    padding-left: 0!important;
+    margin-bottom: 30px;
+  }
+
+  div#order-form > div#groups, div#order-form > div#services {
+    display: inline-block !important;
+    width: 48% !important;
+    vertical-align: top;
+  }
+
+  div#order-form > div#services {
+    margin-left: 3% !important;
+    margin-left: calc(4% - 6px);
+  }
+
+  div#selected-item form#add-form {
+    width: 48%;
+    margin-left: 52%;
+  }
+
+}
+/*Tablet Portrait*/
+
+
+/*Tablet Landscape*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+  div#order-form ul li a span.text {
+    font-size: 16px;
+  }
+
+  div#order-form div#selected-item div#order-item h3 {
+    font-size: 18px;
+  }
+
+}
+/*Tablet Landscape*/
+
+/*Set the width of the text and select inputs*/
+div#order-form div#selected-item div#order-item input[type="text"], div#order-form div#selected-item div#order-item select {
+padding: 5px 8px;
+width: 120px;
+}
+
+/*Remove the padding right from the select*/
+div#order-form div#selected-item div#order-item select {
+padding-right: 0;
+}
+
+table.data-table {
+	margin-bottom: 1.8em;
+}
+table.data-table td {
+	border: 1px solid #c5c5c5;
+	padding: 5px;
+	font-size: 0.85em;
+}
+table.data-table thead td {
+	background: url('images/data-tab/header-bg.gif') left top repeat-x  #00b8dc;
+	color: #ffffff;
+	border-color: #C5C5C5;
+}
+table.data-table thead td a {
+	color: #ffffff;
+	border-color: #ffffff;
+}
+table.data-table td.number {
+	text-align: right;
+}
+table.data-table td.action {
+	text-align: center;
+}
+table.data-table tr:hover {
+	background: #f0ebdf;
+}
+
+
+
+
