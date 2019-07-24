@@ -45,7 +45,7 @@ $title = 'Package';
                         <div class="col-md-7 mb-10">
                             <h5>
                                 <span>{{$service->name}}</span>
-                                <p class="price" data-price="0.030">$0.030 per word</p>
+                                <p class="price" data-price="{{$service->price}}">${{$service->price}} per word</p>
                             </h5>
                         </div>
                         <div class="row" style="padding-left:10px;">
